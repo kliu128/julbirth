@@ -33,7 +33,7 @@ And another:"`;
 
   const completion = await openai.createCompletionFromModel({
     // model: "text-davinci-002",
-    model: "davinci:ft-personal-2022-05-10-19-29-19",
+    model: "davinci:ft-personal-2022-05-10-20-15-10",
     prompt: prompt2,
     temperature: 0.9,
     max_tokens: 150,
