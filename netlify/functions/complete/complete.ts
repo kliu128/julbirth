@@ -29,11 +29,11 @@ And another: "happy bday!!! thanks for being such a good friend. I truly cherish
 
 And another:"`;
 
-  const prompt2 = "To Julian, a birthday message from a friend:";
+  const prompt2 = "To Julian, a birthday message from a friend";
 
   const completion = await openai.createCompletionFromModel({
     // model: "text-davinci-002",
-    model: "davinci:ft-personal-2022-05-10-06-41-37",
+    model: "davinci:ft-personal-2022-05-10-19-29-19",
     prompt: prompt2,
     temperature: 0.9,
     max_tokens: 150,
