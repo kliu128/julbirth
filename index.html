@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>birth</title>
+
+  <style>
+    button,
+    input[type="submit"],
+    input[type="reset"] {
+      background: none;
+      color: inherit;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+    }
+
+    * {
+      color: #DDDDDD;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px;
+      background-color: #222222;
+    }
+
+    h1 {
+      padding: 10px;
+      width: fit-content;
+    }
+
+    .outlined {
+      outline-width: 5px;
+      outline-style: solid;
+      outline-color: black;
+      box-shadow: 20px 20px black;
+      margin-bottom: 30px;
+      width: fit-content;
+    }
+
+    .full-width {
+      max-width: 100%;
+      height: auto;
+    }
+
+    p.entrylink {
+      font-family: 'Courier New', Courier, monospace;
+      cursor: pointer;
+      user-select: none;
+      /* supported by Chrome and Opera */
+      -webkit-user-select: none;
+      /* Safari */
+      -khtml-user-select: none;
+      /* Konqueror HTML */
+      -moz-user-select: none;
+      /* Firefox */
+      -ms-user-select: none;
+      /* Internet Explorer/Edge */
+    }
+
+    div.entry {
+      display: none;
+    }
+
+    #generate {
+      padding: 10px;
+      font-weight: bold;
+      font-size: 32px;
+    }
+
+    #generate:active {
+      transform: translateY(10px);
+      box-shadow: 20px 10px black;
+    }
+  </style>
+
+</head>
+
+<body>
+  <button id="generate" class="outlined">🥳 generate</button>
+
+  <div id="generation"></div>
+
+  <script module>
+    const btn = document.getElementById("generate");
+
+    btn.addEventListener("click", async () => {
+      btn.disabled = true;
+      btn.textContent = "⌛ generating...";
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.textContent = "🥳 generate"
+      }, 1000);
+    });
+  </script>
+</body>
+
+</html>
