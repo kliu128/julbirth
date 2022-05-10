@@ -95,10 +95,15 @@
     btn.addEventListener("click", async () => {
       btn.disabled = true;
       btn.textContent = "⌛ generating...";
-      setTimeout(() => {
+
+      try {
+        const res = await fetch("/.netlify/functions/complete");
+        const text = await res.text();
+        document.querySelector("#generation").textContent = text;
+      } finally {
         btn.disabled = false;
         btn.textContent = "🥳 generate"
-      }, 1000);
+      }
     });
   </script>
 </body>
